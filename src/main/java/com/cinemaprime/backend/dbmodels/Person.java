@@ -2,6 +2,7 @@ package com.cinemaprime.backend.dbmodels;
 
 import com.cinemaprime.backend.enums.Gender;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -16,27 +17,27 @@ public class Person {
   private int alter;
   private Gender gender;
 
-  public Person() {}
+  // public Person() {}
 
   public Person(String firstname, String lastname) {
 	  this.firstname = firstname;
 		this.lastname = lastname;
   }
 
-	public Gender getGender() {
-		return gender;
-	}
+  public Gender getGender() {
+      return gender;
+  }
 
-	public void setGender(Gender gender) {
-		this.gender = gender;
-	}
+  public void setGender(Gender gender) {
+      this.gender = gender;
+  }
 
-	public int getAlter() {
-		return alter;
-	}
+  public int getAlter() {
+      return alter;
+  }
 
-	public void setAlter(int alter) {
-		this.alter = alter;
+  public void setAlter(int alter) {
+      this.alter = alter;
   }
     
   @Override

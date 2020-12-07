@@ -16,6 +16,8 @@
 
 	<properties>
 		<java.version>13</java.version>
+		<spring.data.mongodb.uri>mongodb://root:password@localhost:27020</spring.data.mongodb.uri>
+		<logging.level.org.springframework.data>debug</logging.level.org.springframework.data>
 	</properties>
 
 	<dependencies>
