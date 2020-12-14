@@ -5,44 +5,48 @@ import com.cinemaprime.backend.enums.Öffnungszeit;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Cinemas")
+@Document(collection = "cinemas")
 public class Cinema {
 
     @Id
     public String id;
 
-    private String Name;
-    private int Parkplaetze;
+    private String name;
+    private int parkplaetze;
     private boolean geoeffnet;
     private Öffnungszeit oeffnungszeit;
 
     public Cinema() {}
 
+    public Cinema(String name) {
+        this.name = name;
+    }
+
     public Cinema(String name, int parkplaetze, boolean geoeffnet, Öffnungszeit oeffnungszeit){
-        this.Name = name;
-        this.Parkplaetze = parkplaetze;
+        this.name = name;
+        this.parkplaetze = parkplaetze;
         this.geoeffnet = geoeffnet;
         this.oeffnungszeit = oeffnungszeit;
     }
 
-    public Öffnungszeit ÖffnungszeitAnzeigen(){
+    public Öffnungszeit OeffnungszeitAnzeigen(){
         return this.oeffnungszeit;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getParkplaetze() {
-        return Parkplaetze;
+        return parkplaetze;
     }
 
     public void setParkplaetze(int parkplaetze) {
-        Parkplaetze = parkplaetze;
+        this.parkplaetze = parkplaetze;
     }
 
     public boolean isGeoeffnet() {

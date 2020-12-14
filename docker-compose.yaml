@@ -2,8 +2,15 @@ version: "3.8"
 services:
   mongodb:
     image: mongo
+    container_name: cpmongodb
     ports:
       - "27020:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: password
+
+  maven:
+    build: .
+    command: mvn spring-boot:run
+    ports:
+    - 8081:8080

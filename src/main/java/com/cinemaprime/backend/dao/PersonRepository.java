@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface PersonRepository extends MongoRepository<Person, String> {
     
     Person findByFirstname(String firstname);
-    Person findByLastname(String lastname);
+    // Person findByLastname(String lastname);
 
 }
