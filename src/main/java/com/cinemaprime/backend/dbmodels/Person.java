@@ -6,8 +6,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "persons")
-public class Person {
+public abstract class Person {
 
   @Id
   public String id;
