@@ -1,7 +1,7 @@
 package com.cinemaprime.backend.dao;
 
-import com.cinemaprime.backend.dbmodels.Customer;
-import com.cinemaprime.backend.dbmodels.Person;
+import com.cinemaprime.backend.dbmodels.usermodels.Customer;
+import com.cinemaprime.backend.dbmodels.usermodels.Person;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -9,7 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CustomerRepository extends MongoRepository<Customer, String> {
     
-    Person findByFirstname(String firstname);
+    Customer findByFirstname(String firstname);
+    Customer findByEmail(String email);
     // Person findByLastname(String lastname);
 
 }

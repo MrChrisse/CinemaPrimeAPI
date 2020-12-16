@@ -1,4 +1,4 @@
-package com.cinemaprime.backend.dbmodels;
+package com.cinemaprime.backend.dbmodels.usermodels;
 
 import com.cinemaprime.backend.enums.Gender;
 
@@ -22,6 +22,10 @@ public abstract class Person {
 	  this.firstname = firstname;
 		this.lastname = lastname;
   }
+
+    public Person() {
+
+    }
 
   public Gender getGender() {
       return gender;

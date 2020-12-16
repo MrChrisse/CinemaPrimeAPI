@@ -35,4 +35,4 @@ build/
 ### Mac
 .DS_Store
 
-src/main/java/com/cinemaprime/backend/config/TMDBConfig.java
+src/main/java/com/cinemaprime/backend/config/security/SecurityConstants.java

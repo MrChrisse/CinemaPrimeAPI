@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ApiFetcher {
 
-    private TMDBConfig tmdbConfig = new TMDBConfig();
+    private final TMDBConfig tmdbConfig = new TMDBConfig();
 
     public String getUri() {
         return tmdbConfig.getUri();

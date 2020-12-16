@@ -1,5 +1,3 @@
 package com.cinemaprime.backend.enums;
 
-public enum Video {
-    2D, 3D
-}
+public enum Video { VIDEO_2D, VIDEO_3D }
